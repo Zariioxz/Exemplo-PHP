@@ -5,8 +5,8 @@ $mensagem = "Boa noite $nome";
 
 $num1 = 10;
 $num2 = 30;
-
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
