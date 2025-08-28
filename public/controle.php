@@ -2,17 +2,29 @@
 $mensagem = "";
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     //$mensagem = "Olá ";
+    /*
     if($_POST['periodo'] == 'm') {
         $mensagem = 'Bom dia ';
 
     } else if ($_POST['periodo'] == 't') {
         $mensagem = 'Boa tarde ';
-        
+
     } else {
         $mensagem = 'Boa noite ';
     }
+        */
+    switch($_POST['periodo']) {
+        case 'm':
+            $mensagem = 'Bom dia ';
+            break;
+        case 't':
+            $mensagem = 'Boa tarde ';
+            break;
+        default:
+            $mensagem = 'Boa noite ';
+    }
     $mensagem .= $_POST['nome'];
-    // $mensagem = $mensagem . $_POST['nome'] mesma coisa que a linha de cima.
+    // $mensagem = $mensagem . $_POST['nome'] mesma coisa que a linha de cima
 } else {
     $mensagem = "Digite o seu nome";
     
